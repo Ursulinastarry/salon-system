@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>register your salon</title>
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1392252002111752"
+crossorigin="anonymous"></script>
+ 
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+  <h2>register your salon</h2>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="salon listing.html">Salons</a></li>
+      <li><a href="booking form.html">Book Now</a></li>
+      <li><a href="account.html">create account</a></li>
+      <li><a href="register.html">register your salon</a></li>
+    </ul>
+  </nav>
+<h2>Salon Registration</h2>
+<form action="#" method="POST">
+  <label for="salon_name">Salon Name:</label>
+  <input type="text" id="salon_name" name="salon_name" required>
+  
+  <label for="owner_name">Owner Name:</label>
+  <input type="text" id="owner_name" name="owner_name" required>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" required>
+  
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address" required>
+  
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city" required>
+  
+  <label for="state">State:</label>
+  <input type="text" id="state" name="state" required>
+  
+  <label for="zipcode">ZIP Code:</label>
+  <input type="text" id="zipcode" name="zipcode" required>
+  
+  <label for="country">Country:</label>
+  <input type="text" id="country" name="country" required>
+  
+  <label for="website">Website:</label>
+  <input type="url" id="website" name="website">
+  
+  <label for="services">Services:</label>
+    <select id="services" name="services[]" multiple required>
+      <!-- Add the "[]" to the name attribute to indicate an array -->
+      <option value="hair">Hair</option>
+      <option value="manicure">Manicure</option>
+      <option value="pedicure">Pedicure</option>
+      <option value="massage">Massage</option>
+      <option value="makeup">Makeup</option>
+    </select>
+  
+  
+  <div id="sub-service-manicure" class="sub-service" style="display: none;">
+    <label for="manicure_subservices">Manicure Sub-Services:</label>
+    <select id="manicure_subservices" name="manicure_subservices" multiple>
+      <option value="classic">Classic Manicure </option>
+      <option value="gel">Gel Manicure </option>
+      <option value="french">French Manicure </option>
+      <option value="nail_art">Nail Art </option>
+    </select>
+  </div>
+  
+  <div id="sub-service-pedicure" class="sub-service" style="display: none;">
+    <label for="pedicure_subservices">Pedicure Sub-Services:</label>
+    <select id="pedicure_subservices" name="pedicure_subservices" multiple>
+      <option value="classic">Classic Pedicure</option>
+      <option value="spa">Spa Pedicure </option>
+      <option value="gel">Gel Pedicure </option>
+      <option value="paraffin">Paraffin Pedicure </option>
+    </select>
+  </div>
+  
+  <div id="sub-service-massage" class="sub-service" style="display: none;">
+    <label for="massage_subservices">Massage Sub-Services:</label>
+    <select id="massage_subservices" name="massage_subservices" multiple>
+      <option value="swedish">Swedish Massage </option>
+      <option value="deep_tissue">Deep Tissue Massage </option>
+      <option value="hot_stone">Hot Stone Massage </option>
+      <option value="aromatherapy">Aromatherapy Massage </option>
+    </select>
+  </div>
+  
+  <div id="sub-service-makeup" class="sub-service" style="display: none;">
+    <label for="makeup_subservices">Makeup Sub-Services:</label>
+    <select id="makeup_subservices" name="makeup_subservices" multiple>
+      <option value="bridal">Bridal Makeup</option>
+      <option value="evening">Evening Makeup</option>
+      <option value="special_occasion">Special Occasion Makeup</option>
+      <option value="natural">Natural Makeup </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="registration_fee">Registration Fee:</label>
+    <p>500 ksh/month</p>
+  </div>
+ 
+  
+  <label for="payment_options">Payment Options:</label>
+  <select id="payment_options" name="payment_options" required>
+    <option value="">Select a payment option</option>
+    <option value="mpesa">M-Pesa</option>
+    <!-- Add more payment options as needed -->
+  </select>
+  <input type="submit" value="Register Salon">
+</form>
+
+
+</body>
+
+</html>

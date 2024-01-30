@@ -1,0 +1,165 @@
+
+  h1,h2{
+    color : pink;
+    border-radius: 20px;
+    box-shadow: 20px;
+    border-color: rgb(220, 20, 137);
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    font-size: xx-large;
+    font-weight: 900;
+    font-style: unset;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    
+      }
+ p {
+  font-style: initial;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+  color: black;
+  font-family: 'Edu NSW ACT Foundation', cursive; 
+  position: relative;
+  text-align: center;
+ } 
+body {
+  background-color:plum;
+  
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  background-position: relative;
+  backface-visibility: hidden; 
+ 
+  position: relative;
+  display: center;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fill-available;
+   height: 100%;
+   background-blend-mode: overlay;
+   margin: 0;
+   padding: 0;
+   
+}
+img {
+  position: relative;
+  
+  
+}
+html{
+  height: -webkit-fill-available;
+}
+a {font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  position: right;
+  color: aqua;
+  
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color:white;
+  color: cornflowerblue;
+}
+
+label, input {
+  display: block;
+  margin-bottom: 10px;
+  font-size: xx-large;
+  color: purple;
+}
+
+input[type="submit"] {
+  background-color: palevioletred;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: palevioletred;
+}
+option,select{
+  font-size: xx-large;
+  color: purple;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  display: block;
+  color:palevioletred;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #f2f2f2;
+}
+.img-fluid rounded-circle{
+  width: 30%;
+  height: 50%;
+  position: center;
+ 
+}
+.header-box {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 2px solid #ccc;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 300px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+#map {
+  height: 100%;
+}
+.custom-map-control-button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  
+  height: 40px;
+  cursor: pointer;
+}
+.custom-map-control-button:hover {
+  background: rgb(235, 235, 235);
+}
+.image-container{
+  display:flex;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
