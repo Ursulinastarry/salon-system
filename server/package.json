@@ -1,7 +1,7 @@
 {
-  "name": "gym-bknd",
+  "name": "salon-backend",
   "version": "1.0.0",
-  "description": "backend for the gym membership app",
+  "description": "backend for the salon app",
   "main": "index.js",
   "type": "module",
   "scripts": {
