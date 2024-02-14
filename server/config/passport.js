@@ -17,7 +17,7 @@ export const configurePassport = () => {
           if (!user) {
             return done(null, false, { message: "Incorrect email." });
           }
-          const match = await bcrypt.compare(password, user.password_hash);
+          const match = await bcrypt.compare(password, user.password);
           if (!match) {
             return done(null, false, { message: "Incorrect password." });
           }
