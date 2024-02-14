@@ -3,10 +3,11 @@ import User from "../models/user.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import sendEmail from "./emailSender.js";
+
 //  * normal user registration to the dashboard
-// traditional way of registering a user
 const handleNormalUserRegistration = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, role, first_name, last_name } = req.body;
+
   try {
     // check if user with email exists
     const user = await User.findUserByEmail(email);
@@ -15,8 +16,15 @@ const handleNormalUserRegistration = async (req, res) => {
       return res.status(400).json({ message: "User already exists!" });
     }
     // hash the password
-    const hashedPass = await bcrypt.hash(password, 10);
-    const createUser = await User.createUserWithEmail(email, hashedPass);
+    const hashedPass = await bcrypt.hash(password, parseInt(process.env.HASH_ROUNDS));
+    const data = {
+      email,
+      hashedPass,
+      role,
+      first_name,
+      last_name,
+    };
+    const createUser = await User.createUserWithEmail(data);
     if (!createUser) {
       return res
         .status(400)
@@ -28,6 +36,7 @@ const handleNormalUserRegistration = async (req, res) => {
    const payload = {
       user_id: createUser.insertId,
       email: email,
+      role: role,
    }
     // create token
     const token = jwt.sign(payload, process.env.JWT_SECRET, {

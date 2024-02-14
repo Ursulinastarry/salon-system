@@ -10,8 +10,8 @@ const router = Router();
 // create account route
 router.post(
   "/register",
-    // validationMiddleware.registerValidationRules,
-    // validationMiddleware.validateInputs,
+    validationMiddleware.registerValidationRules(),
+    validationMiddleware.validateInputs,
   userControlers.handleNormalUserRegistration
 );
 

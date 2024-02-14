@@ -13,7 +13,6 @@ const executeQuery = async (query, params = []) => {
   }
 };
 
-
 // * find user by email
 const findUserByEmail = async (email) => {
   const query = "SELECT * FROM users WHERE email = ?";
@@ -28,18 +27,23 @@ const findUserById = async (id) => {
   return result.length > 0 ? result[0] : null;
 };
 
-
 //  * create a new user
-const createUserWithEmail = async (email, hashedPass) => {
-    const query = "INSERT INTO users (email, password_hash) VALUES (?,?)"
-    const result = await executeQuery(query, [email, hashedPass]);
-    return result;
-}
-
+const createUserWithEmail = async (data) => {
+  const query =
+    "INSERT INTO users (email, password, role, first_name, last_name) VALUES (?,?,?,?,?)";
+  const result = await executeQuery(query, [
+    data.email,
+    data.hashedPass,
+    data.role,
+    data.first_name,
+    data.last_name,
+  ]);
+  return result;
+};
 
 // exports
 export default {
   findUserByEmail,
   createUserWithEmail,
-  findUserById
+  findUserById,
 };
